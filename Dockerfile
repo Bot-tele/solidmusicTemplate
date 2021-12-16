@@ -6,7 +6,6 @@ RUN apt-get update \
     && mkdir solidmusic \
     && cd solidmusic \
     && git clone https://github.com/DoellBarr/solidmusic
-WORKDIR /solidmusic
-RUN cd solidmusic \
-    && pip3 install --no-cache-dir --upgrade --requirement requirements.txt
+WORKDIR /solidmusic/solidmusic
+RUN pip3 install --no-cache-dir --upgrade --requirement requirements.txt
 CMD ["python3", "main.py"]
