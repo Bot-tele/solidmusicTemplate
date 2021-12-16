@@ -1,1 +1,1 @@
-worker: docker-compose up
+worker: docker-compose up -d
