@@ -3,6 +3,14 @@
   "description": "Open Source bot to stream media trough Telegram Voice Chat",
   "repository": "https://github.com/DoellBarr/solidmusic",
   "stack": "container",
+  "buildpacks": [
+    {
+      "url": "heroku/python"
+    },
+    {
+      "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git"
+    }
+  ],
   "env": {
     "API_ID": {
       "description": "Fill it with your API_ID, get it from my.telegram.org/apps",
@@ -45,14 +53,6 @@
       "value": "0"
     }
   },
-  "buildpacks": [
-    {
-      "url": "heroku/python"
-    },
-    {
-      "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git"
-    }
-  ],
   "formation": {
     "worker": {
       "quantity": 1,
